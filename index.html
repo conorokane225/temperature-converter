@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+<!--html begins-->
+  <title>Temperature Converter
+  </title>
+  
+
+</head>
+
+<body>
+    <h2>Temperature Converter</h2>
+<p>Type a value in the Fahrenheit field to convert the value to Celsius:</p>
+
+<p>
+  <label>Fahrenheit</label>
+  <input id="inputFahrenheit" type="number" placeholder="Fahrenheit" oninput="temperatureConverter(this.value)" onchange="temperatureConverter(this.value)">
+</p> <!--This line establishes elements for the input field of fahrenheit to celcius-->
+<p>Celcius: <span id="outputCelcius"></span></p> <!--This line is the output field for celcius-->
+
+
+<p>Type a value in the Celcius field to convert the value to Fahrenheit:</p>
+
+<p>
+  <label>Celcius</label>
+  <input id="inputCelcius" type="number" placeholder="Celcius" oninput="temperatureConverter1(this.value)" onchange="temperatureConverter1(this.value)">
+</p> <!-- This line establishes elements for the input field of celcius to fahrenheit -->
+<p>Fahrenheit: <span id="outputFahrenheit"></span></p> <!--This line is the output field for farhenheit-->
+<!--javascript begins-->
+<script>
+function temperatureConverter(valNum) { //establishes element as a function
+  valNum = parseFloat(valNum);
+  document.getElementById("outputCelcius").innerHTML=(valNum-32)/1.8; //calls on the html id outputCelcius and gives an equation value
+ 
+}
+</script>
+<script>
+    function temperatureConverter1(valNum) { //establishes element as a function
+        valNum = parseFloat(valNum);
+        document.getElementById("outputFahrenheit").innerHTML=(valNum*1.8)+32; //calls on the html id outputFahrenheit and gives an equation value
+    }
+</script>
+  <!--javascript ends-->
+</body>
+</html>
+<!--html ends-->
